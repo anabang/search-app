@@ -46,6 +46,14 @@ body {
   outline: none;
   font-size: 20px;
   font-weight: 500;
+  background-color: #493750;
+  color:rgb(254, 246, 236);
+  cursor: pointer;
+
+}
+
+.sortButton:hover {
+  background-color: #29202c;
 }
 
 .userBlock {
@@ -64,16 +72,21 @@ body {
   right: 45px;
   font-size: 22px;
   list-style: none;
+  cursor: pointer;
+
 }
 
 .userItem:hover {
-  text-decoration: underline;
   font-size: 26px;
+  background-color: #493750;
+  height: 50px;
+  min-width: 160px;
+  border-radius: 20px;
+  border: none;
 }
 
 .profileBlock {
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
 }
 
@@ -86,9 +99,6 @@ body {
   height: 250px;
   background-color: #493750;
   border-radius: 50px;
-  /* position: absolute;
-  left: 780px;
-  top: 60px; */
 }
 
 .profileInfo{
@@ -114,4 +124,31 @@ body {
   position: relative;
   top: -18px;
   color: rgb(254, 246, 236);
+}
+
+.pages {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-right: 80px;
+}
+
+.page {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #493750;
+  color:rgb(254, 246, 236);
+  cursor: pointer;
+}
+
+.page:hover {
+  background-color: #29202c;
 }
