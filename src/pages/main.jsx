@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../App.css'
 import axios from 'axios'
-import cn from 'classnames'
 import { setCurrentPage, setTotal } from '../redux/paginationSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import { createPages } from '../utils/createPages'
@@ -50,7 +49,6 @@ const Main = () => {
     }    
 
     const showProfile = (e) =>{
-        console.log(e.target.id);
         const user = e.target.id;
         setCurrentUser(user)
     }
@@ -61,7 +59,6 @@ const Main = () => {
         axios.get(`https://api.github.com/users/${currentUser}`)
         .then((response) => {
             const userData = response.data;
-            console.log(userData);
             setCurrentUserInfo(userData);
           })
 
@@ -82,7 +79,7 @@ const Main = () => {
     <div className='container' >
 
         {currentUser ?
-        <div className={cn('profileBlock', 'profileVisibility' )}  >
+        <div className='profileBlock'>
 
             <div key={currentUserInfo.id} className='profile' >
                 <img className='icon' src={currentUserInfo.avatar_url} alt="" />
